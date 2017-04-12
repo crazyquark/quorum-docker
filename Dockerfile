@@ -1,7 +1,9 @@
 FROM ubuntu:16.04
-MAINTAINER Alex Griessel <alex.griessel@consensys.net>
+MAINTAINER crazyquark
 ENV GOREL go1.7.3.linux-amd64.tar.gz
 ENV PATH $PATH:/usr/local/go/bin
+
+EXPOSE 22000 22001 22002 22003 22004 22005 22006
 
 RUN apt-get update &&  apt-get install -y
 RUN apt-get install -y software-properties-common unzip wget git make gcc libsodium-dev build-essential libdb-dev zlib1g-dev libtinfo-dev sysvbanner wrk psmisc
