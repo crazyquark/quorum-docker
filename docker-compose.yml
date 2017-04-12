@@ -8,12 +8,14 @@ services:
     ports:
       - "22000-22006:22000-22006"
   cakeshop:
-    build:
-      context: .
-      dockerfile: Dockerfile.cakeshop
-    image: java/oracle-java8
+    container_name: cakeshop_1
+    image: jpmc/cakeshop
     ports:
       - "8080:8080"
+    links:
+      - quorum
+    environment:
+      - JAVA_OPTS="-Dgeth.url=http\://quorum\:22001 -Dgeth.auto.start=false -Dgeth.auto.stop=false"
     
 
 
