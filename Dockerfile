@@ -24,4 +24,8 @@ RUN cd quorum && git checkout tags/v1.1.0 && make all &&  cp build/bin/geth /usr
 RUN cd /
 RUN git clone https://github.com/jpmorganchase/quorum-examples
 
+WORKDIR /quorum-examples/examples/7nodes
+RUN ./init.sh
+RUN ./start.sh
+
 ENTRYPOINT tail -f /dev/null
