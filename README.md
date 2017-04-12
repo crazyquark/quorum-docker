@@ -3,12 +3,12 @@ Docker for Quorum Blockchain
 
 ## Getting Started
 
-git clone https://github.com/agriessel/quorum-docker
+git clone https://github.com/crazyquark/quorum-docker
 cd quorum-docker
-docker build -t quorum .
+docker-compose up -d
 
 ## Using Quorum Docker Image
-	docker run -ti --name quoruminstance quorum bash
+	./attach.sh
 
 ## Initialize 7 Nodes, start/stop
 

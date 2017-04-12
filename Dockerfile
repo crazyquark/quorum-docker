@@ -17,7 +17,9 @@ RUN mv go /usr/local/go
 RUN rm ${GOREL}
 
 RUN git clone https://github.com/jpmorganchase/quorum.git
-RUN cd quorum && git checkout tags/q1.1.0 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
+RUN cd quorum && git checkout tags/v1.1.0 && make all &&  cp build/bin/geth /usr/local/bin && cp build/bin/bootnode /usr/local/bin
 
 RUN cd /
 RUN git clone https://github.com/jpmorganchase/quorum-examples
+
+ENTRYPOINT tail -f /dev/null
