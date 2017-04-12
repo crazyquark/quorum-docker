@@ -26,6 +26,5 @@ RUN git clone https://github.com/jpmorganchase/quorum-examples
 
 WORKDIR /quorum-examples/examples/7nodes
 RUN ./init.sh
-RUN ./start.sh
 
-ENTRYPOINT tail -f /dev/null
+ENTRYPOINT ./start.sh && tail -f /dev/null
