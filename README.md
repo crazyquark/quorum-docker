@@ -1,5 +1,7 @@
 # quorum-docker
-Docker for Quorum Blockchain 
+Docker for Quorum Blockchain  
+
+Currently using v1.1.0 of quorum  
 
 ## Getting Started
 
